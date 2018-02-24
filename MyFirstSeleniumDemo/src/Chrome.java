@@ -19,5 +19,6 @@ public class Chrome {
 		driver.quit();
 		System.out.println("test git");
 		;
+		;
 	}
 }

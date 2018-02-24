@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="SeleniumTestDemo" verbose="1">
+
+	<test name="Simple example">
+
+		<classes>
+			<class name="com.test.testng.Grouping" />
+		</classes>
+	</test>
+
+
+</suite>

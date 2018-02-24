@@ -18,5 +18,6 @@ public class Chrome {
 		Thread.sleep(5000); // Let the user actually see something!
 		driver.quit();
 		System.out.println("test git");
+		;
 	}
 }

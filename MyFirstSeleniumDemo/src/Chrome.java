@@ -17,5 +17,6 @@ public class Chrome {
 		searchBox.submit();
 		Thread.sleep(5000); // Let the user actually see something!
 		driver.quit();
+		System.out.println("test git");
 	}
 }

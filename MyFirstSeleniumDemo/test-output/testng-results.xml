@@ -2,24 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6678" started-at="2018-02-24T15:39:41Z" finished-at="2018-02-24T15:39:48Z">
+  <suite name="SeleniumTestDemo" duration-ms="3890" started-at="2018-02-25T14:16:18Z" finished-at="2018-02-25T14:16:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6678" started-at="2018-02-24T15:39:41Z" finished-at="2018-02-24T15:39:48Z">
-      <class name="com.test.testng.SeleniumAPI">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.testng.SeleniumAPI@5c7fa833]" name="beforeMethod" is-config="true" duration-ms="1129" started-at="2018-02-24T23:39:41Z" finished-at="2018-02-24T23:39:43Z">
+    <test name="Simple example" duration-ms="3890" started-at="2018-02-25T14:16:18Z" finished-at="2018-02-25T14:16:22Z">
+      <class name="com.test.sample.MultipleBrowserSearchTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="beforeTest" is-config="true" duration-ms="1084" started-at="2018-02-25T22:16:18Z" finished-at="2018-02-25T22:16:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="operationDropList()[pri:0, instance:com.test.testng.SeleniumAPI@5c7fa833]" name="operationDropList" duration-ms="5531" started-at="2018-02-24T23:39:43Z" finished-at="2018-02-24T23:39:48Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testSogouSearch()[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="testSogouSearch" duration-ms="2661" started-at="2018-02-25T22:16:19Z" finished-at="2018-02-25T22:16:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- operationDropList -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.testng.SeleniumAPI@5c7fa833]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-02-24T23:39:48Z" finished-at="2018-02-24T23:39:48Z">
+        </test-method> <!-- testSogouSearch -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="afterTest" is-config="true" duration-ms="129" started-at="2018-02-25T22:16:21Z" finished-at="2018-02-25T22:16:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.test.testng.SeleniumAPI -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
+    </test> <!-- Simple example -->
+  </suite> <!-- SeleniumTestDemo -->
 </testng-results>

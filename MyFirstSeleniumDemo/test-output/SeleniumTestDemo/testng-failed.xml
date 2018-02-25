@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SeleniumTestDemo]">
+  <test name="Simple example(failed)">
+    <parameter name="browser" value="safari"/>
+    <classes>
+      <class name="com.test.sample.MultipleBrowserSearchTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="testSogouSearch"/>
+        </methods>
+      </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
+    </classes>
+  </test> <!-- Simple example(failed) -->
+</suite> <!-- Failed suite [SeleniumTestDemo] -->

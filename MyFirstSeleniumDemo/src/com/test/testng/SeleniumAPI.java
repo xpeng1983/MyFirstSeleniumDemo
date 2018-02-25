@@ -5,6 +5,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -16,8 +17,8 @@ import org.testng.annotations.Test;
 
 public class SeleniumAPI {
 	public WebDriver driver;
-	//String baseUlr = "https://www.sogou.com/";
-	String baseUlr = "file:///C:/Users/windows/Desktop/seleniumtestweb/select.html";
+	String baseUlr = "https://www.sogou.com/";
+	//tring baseUlr = "file:///C:/Users/windows/Desktop/seleniumtestweb/select.html";
 	// @Test
 	// public void testSearch() throws InterruptedException {
 	// driver.get(baseUlr);
@@ -93,16 +94,19 @@ public class SeleniumAPI {
 	public void operationDropList() throws InterruptedException {
 		driver.get(baseUlr);
 		Thread.sleep(5000);
-		Select dropList=new Select(driver.findElement(By.name("fruit")));
-		System.out.println(dropList.isMultiple());
+		//Select dropList=new Select(driver.findElement(By.name("fruit")));
+		//System.out.println(dropList.isMultiple());
 	}
 	
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.gecko.driver", "C:/bin/geckodriver/geckodriver.exe");
-		System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-		driver = new FirefoxDriver();
+//		System.setProperty("webdriver.gecko.driver", "C:/bin/geckodriver/geckodriver.exe");
+//		System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+//		driver = new FirefoxDriver();
 		
+		
+		System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
+		driver = new ChromeDriver();
 		
 //		 System.setProperty("webdriver.ie.driver", "E:\\selectDriver\\IEDriverServer.exe");
 //		// System.setProperty("webdriver.ie.driver", "D:\\soft\\360\\360se6\\Application\\360se.exe");

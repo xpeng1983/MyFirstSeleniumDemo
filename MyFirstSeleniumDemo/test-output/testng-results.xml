@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="4952" started-at="2018-02-26T07:52:31Z" finished-at="2018-02-26T07:52:36Z">
+  <suite name="Suite1" duration-ms="5295" started-at="2018-02-26T08:37:22Z" finished-at="2018-02-26T08:37:27Z">
     <groups>
     </groups>
-    <test name="Mubrower" duration-ms="4952" started-at="2018-02-26T07:52:31Z" finished-at="2018-02-26T07:52:36Z">
+    <test name="Mubrower" duration-ms="5295" started-at="2018-02-26T08:37:22Z" finished-at="2018-02-26T08:37:27Z">
       <class name="com.test.sample.MultipleBrowserSearchTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@4501b7af]" name="beforeTest" is-config="true" duration-ms="2625" started-at="2018-02-26T15:52:31Z" finished-at="2018-02-26T15:52:34Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@15eb5ee5]" name="beforeTest" is-config="true" duration-ms="2783" started-at="2018-02-26T16:37:22Z" finished-at="2018-02-26T16:37:24Z">
           <params>
             <param index="0">
               <value>
@@ -20,10 +20,10 @@
         </test-method> <!-- beforeTest -->
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
       <class name="com.test.sample.SeleniumAPI">
-        <test-method status="PASS" signature="operateCheckBox()[pri:0, instance:com.test.sample.SeleniumAPI@523884b2]" name="operateCheckBox" duration-ms="2312" started-at="2018-02-26T15:52:34Z" finished-at="2018-02-26T15:52:36Z">
+        <test-method status="PASS" signature="captureScreenInCurrentWindow()[pri:0, instance:com.test.sample.SeleniumAPI@2145b572]" name="captureScreenInCurrentWindow" duration-ms="2499" started-at="2018-02-26T16:37:24Z" finished-at="2018-02-26T16:37:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- operateCheckBox -->
+        </test-method> <!-- captureScreenInCurrentWindow -->
       </class> <!-- com.test.sample.SeleniumAPI -->
     </test> <!-- Mubrower -->
   </suite> <!-- Suite1 -->

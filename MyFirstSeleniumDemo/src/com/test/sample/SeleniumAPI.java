@@ -1,13 +1,20 @@
 package com.test.sample;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -174,8 +181,11 @@ public class SeleniumAPI {
 			}
 		}
 	}
-
-	@Test
+	/**
+	 * 复选框
+	 * @throws InterruptedException
+	 */
+	@Test(enabled = false)
 	public void operateCheckBox() throws InterruptedException {
 
 		Global.driver.get(Global.url);
@@ -190,5 +200,28 @@ public class SeleniumAPI {
 		if (checkBoxOption.isSelected()) {
 			checkBoxOption.click();
 		}
+	}
+	
+	/**
+	 * 杀掉进程
+	 */
+	@Test(enabled=false)
+	public void operateEindowsProcess() {
+		WindowsUtils.killByName("firefox.exe"); //杀掉Windows进程中的Firefox浏览器进程，关闭所有Firefox浏览器
+		WindowsUtils.killByName("iexplore.exe"); 
+		WindowsUtils.killByName("chrome.exe"); 
+	} 
+	
+	/**
+	 * 截屏
+	 * @throws IOException 
+	 */
+	@Test(enabled=false)
+	public void captureScreenInCurrentWindow() throws IOException {
+		Global.driver.get(Global.url);
+		//把当前浏览器打开的页面进行截图，保存到一个File对象中
+		File scrFile=((TakesScreenshot)Global.driver).getScreenshotAs(OutputType.FILE);
+		//把File对象转换为一个保存在C磁盘下testing目录中名为test.png的图片文件
+		FileUtils.copyFile(scrFile, new File("c:\\testing\\test.png"));
 	}
 }

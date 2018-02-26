@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="testngLibs/snakeyaml.jar"/>
 	<classpathentry kind="lib" path="testngLibs/testng-sources.jar"/>
 	<classpathentry kind="lib" path="testngLibs/testng.jar"/>
+	<classpathentry kind="lib" path="apacheLibs/commons-io-2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

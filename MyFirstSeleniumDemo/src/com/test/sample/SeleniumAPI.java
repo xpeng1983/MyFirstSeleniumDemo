@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
@@ -223,5 +223,45 @@ public class SeleniumAPI {
 		File scrFile=((TakesScreenshot)Global.driver).getScreenshotAs(OutputType.FILE);
 		//把File对象转换为一个保存在C磁盘下testing目录中名为test.png的图片文件
 		FileUtils.copyFile(scrFile, new File("c:\\testing\\test.png"));
+	}
+	
+	/**
+	 * 检查页面元素的文本内容是否出现
+	 */
+	@Test(enabled=false)
+	public void isElementTextPresent() {
+		Global.driver.get(Global.url);
+		WebElement text=Global.driver.findElement(By.xpath("//p[1]"));
+		String contentText=text.getText();//获取P元素标签的文本内容
+		Assert.assertEquals(contentText, "《光荣之路》这个电影真的不错");
+		Assert.assertTrue(contentText.contains("电影")); //是否包含电影
+		Assert.assertTrue(contentText.startsWith("《"));
+		Assert.assertTrue(contentText.endsWith("错"));		
+	}
+	
+	/**
+	 * 执行javaScript脚本
+	 */
+	@Test(enabled=false)
+	public void executeJavaScript() {
+		Global.driver.get(Global.url);
+		JavascriptExecutor js=(JavascriptExecutor)Global.driver;
+		String title=(String)js.executeScript("return document.title");
+		System.out.println(title);
+		
+		String serachButtonText=(String)js.executeScript("var button=document.getElementById('stb');return button.value");
+		
+		System.out.println(serachButtonText);
+	}
+	
+	/**
+	 * 拖拽页面元素
+	 */
+	@Test
+	public void dragPageElement() {
+		Global.driver.get(Global.url);
+		WebElement draggable=Global.driver.findElement(By.id("draggable"));		
+		//拖拽移动，下方表示向下移动100个像素，0表示元素的横坐标不变
+		new Actions(Global.driver).dragAndDropBy(draggable, 0, 100).build().perform();
 	}
 }

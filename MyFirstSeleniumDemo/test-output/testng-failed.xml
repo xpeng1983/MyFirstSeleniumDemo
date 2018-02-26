@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
-  <parameter name="browser" value="chrome"/>
-  <test name="Mubrower(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.test.sample.SeleniumAPI">
         <methods>
-          <include name="operateRadio"/>
+          <include name="dragPageElement"/>
         </methods>
       </class> <!-- com.test.sample.SeleniumAPI -->
-      <class name="com.test.sample.MultipleBrowserSearchTest">
-        <methods>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
     </classes>
-  </test> <!-- Mubrower(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -4,16 +4,16 @@
   <parameter name="browser" value="chrome"/>
   <test name="Mubrower(failed)">
     <classes>
-      <class name="com.test.sample.SeleniumAPI">
-        <methods>
-          <include name="operateRadio"/>
-        </methods>
-      </class> <!-- com.test.sample.SeleniumAPI -->
       <class name="com.test.sample.MultipleBrowserSearchTest">
         <methods>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
+      <class name="com.test.sample.SeleniumAPI">
+        <methods>
+          <include name="isElementTextPresent"/>
+        </methods>
+      </class> <!-- com.test.sample.SeleniumAPI -->
     </classes>
   </test> <!-- Mubrower(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

@@ -1,42 +1,45 @@
 package com.test.sample;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 public class MultipleBrowserSearchTest {
-	
-	WebDriver driver;
-	String url="http://www.sogou.com/";
-	
+
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeTest
 	public void beforeTest(String browser) {
-		//public void beforeTest() {
-		//String browser="safari";
-		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
-			driver = new ChromeDriver();
-		}else if(browser.equalsIgnoreCase("safari")) {
-			driver=new SafariDriver();
+		if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
+			// System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--test-type", "--ignore-certificate-errors");
+			Global.driver = new ChromeDriver(options);
+		} else if (browser.equalsIgnoreCase("safari")) {
+			Global.driver = new SafariDriver();
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "C:/bin/geckodriver/geckodriver.exe");
+			System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			Global.driver = new FirefoxDriver();
 		}
 	}
-	@Test
-	public void testSogouSearch() throws InterruptedException {
-		driver.get(url);
-		driver.findElement(By.id("query")).sendKeys("·Æ·²");
-		driver.findElement(By.id("stb")).click();
-		Thread.sleep(2000);
-		
-	}
-	
-	@AfterClass
-	public void afterTest() {
-		driver.close();
-	}
+	// @Test
+	// public void testSogouSearch() throws InterruptedException {
+	// Global.driver.get(url);
+	// Global.driver.findElement(By.id("query")).sendKeys("·Æ·²");
+	// Global.driver.findElement(By.id("stb")).click();
+	// Thread.sleep(2000);
+	//
+	// }
+
+	// @AfterTest
+	// public void afterTest() {
+	// System.out.println("¿ªÊ¼ÍË³öä¯ÀÀÆ÷");
+	// Global.driver.close();
+	// System.out.println("Íê³ÉÍË³öä¯ÀÀÆ÷");
+	// }
 }

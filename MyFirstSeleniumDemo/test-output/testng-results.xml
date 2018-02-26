@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SeleniumTestDemo" duration-ms="3890" started-at="2018-02-25T14:16:18Z" finished-at="2018-02-25T14:16:22Z">
+  <suite name="Suite1" duration-ms="4952" started-at="2018-02-26T07:52:31Z" finished-at="2018-02-26T07:52:36Z">
     <groups>
     </groups>
-    <test name="Simple example" duration-ms="3890" started-at="2018-02-25T14:16:18Z" finished-at="2018-02-25T14:16:22Z">
+    <test name="Mubrower" duration-ms="4952" started-at="2018-02-26T07:52:31Z" finished-at="2018-02-26T07:52:36Z">
       <class name="com.test.sample.MultipleBrowserSearchTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="beforeTest" is-config="true" duration-ms="1084" started-at="2018-02-25T22:16:18Z" finished-at="2018-02-25T22:16:19Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@4501b7af]" name="beforeTest" is-config="true" duration-ms="2625" started-at="2018-02-26T15:52:31Z" finished-at="2018-02-26T15:52:34Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testSogouSearch()[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="testSogouSearch" duration-ms="2661" started-at="2018-02-25T22:16:19Z" finished-at="2018-02-25T22:16:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSogouSearch -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@6767c1fc]" name="afterTest" is-config="true" duration-ms="129" started-at="2018-02-25T22:16:21Z" finished-at="2018-02-25T22:16:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
-    </test> <!-- Simple example -->
-  </suite> <!-- SeleniumTestDemo -->
+      <class name="com.test.sample.SeleniumAPI">
+        <test-method status="PASS" signature="operateCheckBox()[pri:0, instance:com.test.sample.SeleniumAPI@523884b2]" name="operateCheckBox" duration-ms="2312" started-at="2018-02-26T15:52:34Z" finished-at="2018-02-26T15:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- operateCheckBox -->
+      </class> <!-- com.test.sample.SeleniumAPI -->
+    </test> <!-- Mubrower -->
+  </suite> <!-- Suite1 -->
 </testng-results>

@@ -1,4 +1,4 @@
-package com.test.testng;
+package com.test.sample;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;

@@ -380,6 +380,6 @@ public class SeleniumAPI {
 		wait.until(ExpectedConditions.textToBePresentInElement(p, "爱吃的水果"));
 		System.out.println("页面的p标签元素包含文本\"爱吃的水果\"");
 		
-	
+	;
 	}	
 }

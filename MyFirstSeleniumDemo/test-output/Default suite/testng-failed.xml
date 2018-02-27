@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.sample.SeleniumAPI">
         <methods>
-          <include name="dragPageElement"/>
+          <include name="testExplicitWait"/>
         </methods>
       </class> <!-- com.test.sample.SeleniumAPI -->
     </classes>

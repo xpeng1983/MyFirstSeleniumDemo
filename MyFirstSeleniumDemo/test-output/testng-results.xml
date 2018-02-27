@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="11" total="12" passed="1">
+<testng-results skipped="0" failed="0" ignored="18" total="19" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="5408" started-at="2018-02-26T13:58:32Z" finished-at="2018-02-26T13:58:37Z">
+  <suite name="Suite1" duration-ms="2975" started-at="2018-02-27T08:56:24Z" finished-at="2018-02-27T08:56:27Z">
     <groups>
     </groups>
-    <test name="Mubrower" duration-ms="5408" started-at="2018-02-26T13:58:32Z" finished-at="2018-02-26T13:58:37Z">
+    <test name="Mubrower" duration-ms="2975" started-at="2018-02-27T08:56:24Z" finished-at="2018-02-27T08:56:27Z">
       <class name="com.test.sample.MultipleBrowserSearchTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@cb5822]" name="beforeTest" is-config="true" duration-ms="1042" started-at="2018-02-26T21:58:32Z" finished-at="2018-02-26T21:58:33Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@61832929]" name="beforeTest" is-config="true" duration-ms="2677" started-at="2018-02-27T16:56:24Z" finished-at="2018-02-27T16:56:27Z">
           <params>
             <param index="0">
               <value>
@@ -20,10 +20,10 @@
         </test-method> <!-- beforeTest -->
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
       <class name="com.test.sample.SeleniumAPI">
-        <test-method status="PASS" signature="dragPageElement()[pri:0, instance:com.test.sample.SeleniumAPI@4b9e13df]" name="dragPageElement" duration-ms="4352" started-at="2018-02-26T21:58:33Z" finished-at="2018-02-26T21:58:37Z">
+        <test-method status="PASS" signature="testExplicitWait()[pri:0, instance:com.test.sample.SeleniumAPI@29774679]" name="testExplicitWait" duration-ms="287" started-at="2018-02-27T16:56:27Z" finished-at="2018-02-27T16:56:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dragPageElement -->
+        </test-method> <!-- testExplicitWait -->
       </class> <!-- com.test.sample.SeleniumAPI -->
     </test> <!-- Mubrower -->
   </suite> <!-- Suite1 -->

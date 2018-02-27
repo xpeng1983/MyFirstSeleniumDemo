@@ -4,7 +4,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -14,8 +13,8 @@ public class MultipleBrowserSearchTest {
 	@BeforeTest
 	public void beforeTest(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			//System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
-			System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--test-type", "--ignore-certificate-errors");
 			Global.driver = new ChromeDriver(options);

@@ -5,7 +5,7 @@
 	<test name="Mubrower">
 		<classes>
 			<class name="com.test.sample.MultipleBrowserSearchTest" />
-			<class name="com.test.sample.SeleniumAPI" />
+			<class name="com.test.sample.SeleniumAPI2" />
 		</classes>
 	</test>
 </suite>

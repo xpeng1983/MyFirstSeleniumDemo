@@ -9,11 +9,11 @@
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
-      <class name="com.test.sample.SeleniumAPI">
+      <class name="com.test.sample.SeleniumAPI2">
         <methods>
-          <include name="testExplicitWait"/>
+          <include name="testAjaxDivOption"/>
         </methods>
-      </class> <!-- com.test.sample.SeleniumAPI -->
+      </class> <!-- com.test.sample.SeleniumAPI2 -->
     </classes>
   </test> <!-- Mubrower(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

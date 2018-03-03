@@ -13,8 +13,8 @@ public class MultipleBrowserSearchTest {
 	@BeforeTest
 	public void beforeTest(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
-			//System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--test-type", "--ignore-certificate-errors");
 			Global.driver = new ChromeDriver(options);

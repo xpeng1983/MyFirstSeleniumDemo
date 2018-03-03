@@ -5,7 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class SeleniumAPI2 {
@@ -33,12 +36,24 @@ public class SeleniumAPI2 {
 		Global.driver.get("http://www.sogou.com");
 		WebElement searchInputBox = Global.driver.findElement(By.id("query"));
 		searchInputBox.click();
+		
+		
+		//List<WebElement> suggetionOptions = Global.driver.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
+		
+		List<WebElement> suggetionOptions=new WebDriverWait(Global.driver, 20).until(new ExpectedCondition<List<WebElement>>(){
 
-		List<WebElement> suggetionOptions = Global.driver.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
-		System.out.println("长度:"+suggetionOptions);
+			@Override
+			public List<WebElement> apply(WebDriver arg0) {
+				return arg0.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
+			}
+			
+		});
+		System.out.println("长度:"+suggetionOptions.size());
 		for (WebElement element : suggetionOptions) {
 			System.out.println(element.getText());
-			if (element.getText().contains("h")) {
+			if (element.getText().contains("中国"
+					+ "")) {
+				//element.click();
 				System.out.println(element.getText());
 				element.click();
 				break;

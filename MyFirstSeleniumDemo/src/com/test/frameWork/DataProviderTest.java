@@ -27,7 +27,7 @@ public class DataProviderTest {
 		Global.driver.findElement(By.id("query")).sendKeys(searchWord1+" "+searchWord2);
 		Global.driver.findElement(By.id("stb")).click();
 		Thread.sleep(3000);
-		
+		;
 		Assert.assertTrue(Global.driver.getPageSource().contains(searchResult) );
 		Global.driver.quit();
 	}

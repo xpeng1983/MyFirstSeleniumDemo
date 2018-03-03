@@ -46,7 +46,7 @@ public class SeleniumAPI2 {
 			public List<WebElement> apply(WebDriver arg0) {
 				return arg0.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
 			}
-			;
+			
 		});
 		System.out.println("³¤¶È:"+suggetionOptions.size());
 		for (WebElement element : suggetionOptions) {

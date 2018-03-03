@@ -29,24 +29,27 @@ public class SeleniumAPI2 {
 
 	/**
 	 * 在Ajax方式产生的浮动框中，单击选择包含某个关键字的选项
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void testAjaxDivOption() {
+	public void testAjaxDivOption() throws InterruptedException {
 
 		Global.driver.get("http://www.sogou.com");
 		WebElement searchInputBox = Global.driver.findElement(By.id("query"));
 		searchInputBox.click();
-		
+		System.out.println("-------------------------------");
+		System.out.println(Global.driver.getPageSource());
+		System.out.println("-------------------------------");
+		//Thread.sleep(2000);
 		
 		//List<WebElement> suggetionOptions = Global.driver.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
 		
-		List<WebElement> suggetionOptions=new WebDriverWait(Global.driver, 20).until(new ExpectedCondition<List<WebElement>>(){
+		List<WebElement> suggetionOptions=(new WebDriverWait(Global.driver, 20)).until(new ExpectedCondition<List<WebElement>>(){
 
 			@Override
 			public List<WebElement> apply(WebDriver arg0) {
 				return arg0.findElements(By.xpath("//*[@id='vl']/div[1]/ul/li"));
 			}
-			
 		});
 		System.out.println("长度:"+suggetionOptions.size());
 		for (WebElement element : suggetionOptions) {

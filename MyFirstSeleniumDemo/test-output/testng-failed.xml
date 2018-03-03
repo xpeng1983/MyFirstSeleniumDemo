@@ -9,11 +9,11 @@
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
-      <class name="com.test.sample.SeleniumAPI2">
+      <class name="com.test.frameWork.DataProviderTest">
         <methods>
-          <include name="testAjaxDivOption"/>
+          <include name="test" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- com.test.sample.SeleniumAPI2 -->
+      </class> <!-- com.test.frameWork.DataProviderTest -->
     </classes>
   </test> <!-- Mubrower(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

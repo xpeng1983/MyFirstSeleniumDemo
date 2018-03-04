@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_161"/>
+	<classpathentry kind="src" path="MyFirstSeleniumDemo/src"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/apacheLibs/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/byte-buddy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/client-combined-3.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/client-combined-3.8.1.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/guava-23.0.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/seleniumLibs/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/guava-base-r03.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/guava-collections-r03.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/jcommander.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/snakeyaml.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/testng-remote.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/testng-sources.jar"/>
+	<classpathentry kind="lib" path="MyFirstSeleniumDemo/testngLibs/testng.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

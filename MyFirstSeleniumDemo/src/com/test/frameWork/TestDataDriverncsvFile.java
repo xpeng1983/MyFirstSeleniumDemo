@@ -17,7 +17,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.test.sample.Global;
 
 public class TestDataDriverncsvFile {
 
@@ -26,7 +25,7 @@ public class TestDataDriverncsvFile {
 
 	@DataProvider(name = "testData")
 	public static Object[][] words() throws IOException {
-		return getTestData("D:\\git\\MyFirstSeleniumDemo\\SeleniumTestData\\CSV.csv");
+		return getTestData("MyFirstSeleniumDemo\\SeleniumTestData\\CSV.csv");
 	}
 
 	/**
@@ -91,7 +90,7 @@ public class TestDataDriverncsvFile {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
 		// System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--test-type", "--ignore-certificate-errors");

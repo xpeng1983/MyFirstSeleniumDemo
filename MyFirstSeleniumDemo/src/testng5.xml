@@ -4,8 +4,8 @@
 	<parameter name="browser" value="chrome" />
 	<test name="Mubrower">
 		<classes>
-			<class name="com.test.sample.MultipleBrowserSearchTest" />
-			<class name="com.test.frameWork.DataProviderTest" />
+			 <class name="com.test.sample.MultipleBrowserSearchTest" /> 
+			<class name="com.test.frameWork.TestDataDriverncsvFile" />
 		</classes>
 	</test>
 </suite>

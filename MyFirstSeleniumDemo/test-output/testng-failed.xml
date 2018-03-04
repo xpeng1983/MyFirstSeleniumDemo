@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
-  <parameter name="browser" value="chrome"/>
-  <test name="Mubrower(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.test.sample.MultipleBrowserSearchTest">
+      <class name="com.test.frameWork.TestDataDriverncsvFile">
         <methods>
-          <include name="beforeTest"/>
+          <include name="testSearch" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
-      <class name="com.test.frameWork.DataProviderTest">
-        <methods>
-          <include name="test" invocation-numbers="1 2"/>
-        </methods>
-      </class> <!-- com.test.frameWork.DataProviderTest -->
+      </class> <!-- com.test.frameWork.TestDataDriverncsvFile -->
     </classes>
-  </test> <!-- Mubrower(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

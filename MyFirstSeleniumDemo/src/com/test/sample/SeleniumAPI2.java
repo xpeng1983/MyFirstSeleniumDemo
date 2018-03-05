@@ -31,7 +31,7 @@ public class SeleniumAPI2 {
 	 * 在Ajax方式产生的浮动框中，单击选择包含某个关键字的选项
 	 * @throws InterruptedException 
 	 */
-	@Test
+	@Test(enabled=false)
 	public void testAjaxDivOption() throws InterruptedException {
 
 		Global.driver.get("http://www.sogou.com");
@@ -69,6 +69,7 @@ public class SeleniumAPI2 {
 	 * 
 	 * @param element
 	 */
+	@Test(enabled=false)
 	public void JavaScriptClick(WebElement element) {
 
 		try {
@@ -89,8 +90,51 @@ public class SeleniumAPI2 {
 		}
 	}
 	
+	/**
+	 *   在日期选择器上进行日期选择
+	 */
+	@Test(enabled=false)
 	public void testdataPicker() {
-	
+		Global.driver.get("https://jqueryui.com/resources/demos/datepicker/other-months.html");
+		//查找到日期输入框，直接输入日期，就可以变相模拟在日期控件上进行选择
+		Global.driver.findElement(By.id("datepicker")).sendKeys("12/13/2015");
+		
 	}
 	
+	/**
+	 * 操作Web页面的滚动条
+	 * 1、滑动滚动条到页面最下方
+	 * @throws InterruptedException 
+	 */
+	@Test(priority=1)
+	public void scrollingToBottonmofApage() throws InterruptedException {
+		Global.driver.get("http://v.sogou.com/");
+		//使用JavaScript的scrollTo函数和documet.body.scrollHeight参数
+		 //将页面的滚动条滑动到页面的最下方
+		((JavascriptExecutor)Global.driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
+		//停顿3秒，用于人工验证滚动条是否滑动到指定的位置，根据测试需求，可注释下面的停顿代码
+		Thread.sleep(3000);
+	}
+	
+	/**
+	 * 操作Web页面的滚动条
+	 * 2、滑动滚动条找到指定的元素
+	 * @throws InterruptedException 
+	 */
+	@Test(priority=2)
+	public void scrollingToElementofPage() throws InterruptedException {
+		WebElement element=Global.driver.findElement(By.xpath("//a[text()='美国']"));
+		//使用JavaScript的scrollIntoView()函数将滚动条滑动到页面的指定元素位置
+		((JavascriptExecutor)Global.driver).executeScript("arguments[0].scrollIntoView();",element);
+		Thread.sleep(3000);
+	}
+	
+	@Test(priority=3)
+	public void scrollingByCoordinatesofAPage() throws InterruptedException {
+		//使用JavaScript的scrollTo函数，使用0和800的横纵坐标参数
+		//将页面的滚动条纵向下滑800个像素
+		((JavascriptExecutor)Global.driver).executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+	}
 }
+

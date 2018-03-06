@@ -6,12 +6,13 @@ import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.By;
 
-
 public class ObjectMap {
-	
+
 	Properties properties;
-	//读取配置文件
+
+	// 读取配置文件
 	public ObjectMap(String propFile) {
+		properties = new Properties();
 		FileInputStream in;
 		try {
 			in = new FileInputStream(propFile);
@@ -22,22 +23,22 @@ public class ObjectMap {
 		} catch (IOException e) {
 			System.out.println("读取对象文件出错");
 			e.printStackTrace();
-		}	
+		}
 	}
-	
+
 	public By getLocator(String elementNameInproFile) throws Exception {
-		
-		//根据变量elementNameInproFile，从属性配置文件中读取相应的配置对象
-		String locator=properties.getProperty(elementNameInproFile);
-		
+
+		// 根据变量elementNameInproFile，从属性配置文件中读取相应的配置对象
+		String locator = properties.getProperty(elementNameInproFile);
+
 		/**
 		 * 将配置对象中的定位类型存储到locatorType变量，将定位表达式的值存储到locatorValue变量中
 		 */
-		String locatorType=locator.split(":")[0].toLowerCase();
-		String locatorValue=locator.split(":")[1];
-		
-		System.out.println("获取的定位类型："+locatorType+"\t 获取的定位表达式"+locatorValue);
-		
+		String locatorType = locator.split(":")[0].toLowerCase();
+		String locatorValue = locator.split(":")[1];
+
+		System.out.println("获取的定位类型：" + locatorType + "\t 获取的定位表达式" + locatorValue);
+
 		switch (locatorType.toLowerCase()) {
 		case "id":
 			return By.id(locatorType);
@@ -56,10 +57,9 @@ public class ObjectMap {
 		case "xpath":
 			return By.xpath(locatorType);
 		default:
-			throw new Exception("输入的 locator type 未在程序中被定义"+locatorType);
+			throw new Exception("输入的 locator type 未在程序中被定义" + locatorType);
 		}
-		
+
 	}
-	
-	
+
 }

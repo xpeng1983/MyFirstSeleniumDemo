@@ -5,7 +5,7 @@
 	<test name="Mubrower">
 		<classes>
 			 <class name="com.test.sample.MultipleBrowserSearchTest" /> 
-			<class name="com.test.frameWork.TestDataDriverncsvFile" />
+			<class name="com.test.uimap.TestSohuMailLoginByObjectMap" />
 		</classes>
 	</test>
 </suite>

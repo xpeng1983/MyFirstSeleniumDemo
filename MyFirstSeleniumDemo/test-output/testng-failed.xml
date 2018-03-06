@@ -11,7 +11,7 @@
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
       <class name="com.test.sample.SeleniumAPI2">
         <methods>
-          <include name="testRobotOperateKeyboard"/>
+          <include name="testImageComparison"/>
         </methods>
       </class> <!-- com.test.sample.SeleniumAPI2 -->
     </classes>

@@ -25,7 +25,7 @@ public class TestDataDriverncsvFile {
 
 	@DataProvider(name = "testData")
 	public static Object[][] words() throws IOException {
-		return getTestData("MyFirstSeleniumDemo\\SeleniumTestData\\CSV.csv");
+		return getTestData("SeleniumTestData\\CSV.csv");
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class TestDataDriverncsvFile {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
 		// System.setProperty("webdriver.chrome.driver", "/XPENG/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--test-type", "--ignore-certificate-errors");

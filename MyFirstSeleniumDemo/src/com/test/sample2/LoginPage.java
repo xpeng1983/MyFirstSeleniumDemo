@@ -53,8 +53,8 @@ public class LoginPage extends LoadableComponent<LoginPage>{
 		Thread.sleep(5000);
 		WebElement iframe=driver.findElement(By.id("x-URS-iframe"));
 		driver.switchTo().frame(iframe);
-		userName.sendKeys("asdff_px");
-		password.sendKeys("Hjnpx831003**");
+		userName.sendKeys("***********x");
+		password.sendKeys("************");
 		loginButton.click();
 		Thread.sleep(1000);
 		loginButton2.click();

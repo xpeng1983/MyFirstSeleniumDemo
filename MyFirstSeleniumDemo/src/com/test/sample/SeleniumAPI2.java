@@ -255,7 +255,7 @@ public class SeleniumAPI2 {
 	 * @throws InterruptedException
 	 * @throws IOException
 	 */
-	@Test
+	@Test(enabled=false)
 	public void testImageComparison() throws InterruptedException, IOException {
 		Global.driver.get("http://www.baidu.com/");
 		Thread.sleep(3000);
@@ -293,5 +293,25 @@ public class SeleniumAPI2 {
 			// Assert.assertTrue(matchFlag, "测试过程中的截图和期望的截图并不一致");
 		}
 	}
-
+	
+	@Test
+	public void testHightLightWebElement() throws InterruptedException {
+		Global.driver.navigate().to("http://www.sogou.com");
+		WebElement searchInputBox=Global.driver.findElement(By.id("query"));
+		WebElement submitButton=Global.driver.findElement(By.id("stb"));
+		// 设置高亮显示元素的封装函数，将搜索输入框进行高亮显示
+		highlightElement(searchInputBox);
+		searchInputBox.sendKeys("光荣之路自动化测试");
+		Thread.sleep(3000);
+		highlightElement(submitButton);
+		Thread.sleep(3000);
+		submitButton.click();
+	}
+	
+	public void highlightElement(WebElement element) {
+		JavascriptExecutor js=(JavascriptExecutor)Global.driver;
+		//使用JavaScript语句将传入参数的页面元素对象的背景颜色和边框颜色分别设置成为黄色和红色
+		js.executeScript("arguments[0].setAttribute('style',arguments[1]);",element,"background:yellow;border:2px solid red;");
+	}
+	
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="12" total="13" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="8275" started-at="2018-03-06T13:44:42Z" finished-at="2018-03-06T13:44:50Z">
+  <suite name="Suite1" duration-ms="3039" started-at="2018-03-07T08:56:28Z" finished-at="2018-03-07T08:56:31Z">
     <groups>
     </groups>
-    <test name="Mubrower" duration-ms="8275" started-at="2018-03-06T13:44:42Z" finished-at="2018-03-06T13:44:50Z">
+    <test name="Mubrower" duration-ms="3039" started-at="2018-03-07T08:56:28Z" finished-at="2018-03-07T08:56:31Z">
       <class name="com.test.sample.MultipleBrowserSearchTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@cb5822]" name="beforeTest" is-config="true" duration-ms="1370" started-at="2018-03-06T21:44:42Z" finished-at="2018-03-06T21:44:44Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.sample.MultipleBrowserSearchTest@3ffc5af1]" name="beforeTest" is-config="true" duration-ms="2662" started-at="2018-03-07T16:56:28Z" finished-at="2018-03-07T16:56:31Z">
           <params>
             <param index="0">
               <value>
@@ -20,10 +20,10 @@
         </test-method> <!-- beforeTest -->
       </class> <!-- com.test.sample.MultipleBrowserSearchTest -->
       <class name="com.test.sample.SeleniumAPI2">
-        <test-method status="PASS" signature="testHightLightWebElement()[pri:0, instance:com.test.sample.SeleniumAPI2@4b9e13df]" name="testHightLightWebElement" duration-ms="6891" started-at="2018-03-06T21:44:44Z" finished-at="2018-03-06T21:44:50Z">
+        <test-method status="PASS" signature="testHandleiFrame2()[pri:0, instance:com.test.sample.SeleniumAPI2@5e5792a0]" name="testHandleiFrame2" duration-ms="366" started-at="2018-03-07T16:56:31Z" finished-at="2018-03-07T16:56:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHightLightWebElement -->
+        </test-method> <!-- testHandleiFrame2 -->
       </class> <!-- com.test.sample.SeleniumAPI2 -->
     </test> <!-- Mubrower -->
   </suite> <!-- Suite1 -->

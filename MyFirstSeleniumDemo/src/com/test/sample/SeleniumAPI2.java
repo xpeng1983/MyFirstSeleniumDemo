@@ -13,6 +13,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -85,7 +86,7 @@ public class SeleniumAPI2 {
 	}
 
 	/**
-	 * 单击事件封装方法
+	 * 单击事件封装方法 
 	 * 
 	 * @param element
 	 */
@@ -294,7 +295,11 @@ public class SeleniumAPI2 {
 		}
 	}
 	
-	@Test
+	/**
+	 * 高亮显示正在被操作的页面元素
+	 * @throws InterruptedException
+	 */
+	@Test(enabled=false)
 	public void testHightLightWebElement() throws InterruptedException {
 		Global.driver.navigate().to("http://www.sogou.com");
 		WebElement searchInputBox=Global.driver.findElement(By.id("query"));
@@ -312,6 +317,36 @@ public class SeleniumAPI2 {
 		JavascriptExecutor js=(JavascriptExecutor)Global.driver;
 		//使用JavaScript语句将传入参数的页面元素对象的背景颜色和边框颜色分别设置成为黄色和红色
 		js.executeScript("arguments[0].setAttribute('style',arguments[1]);",element,"background:yellow;border:2px solid red;");
+	}
+	
+	@Test(enabled=false)
+	public void testLog4j() throws InterruptedException {
+		DOMConfigurator.configure("log4j.xml");
+		Log.startTestCase("搜索功能测试开始");
+		Global.driver.navigate().to("http://www.sogou.com");
+		Log.info("打开sogou首页");
+		WebElement searchInputBox=Global.driver.findElement(By.id("query"));
+		WebElement submitButton=Global.driver.findElement(By.id("stb"));
+		// 设置高亮显示元素的封装函数，将搜索输入框进行高亮显示
+		highlightElement(searchInputBox);
+		searchInputBox.sendKeys("光荣之路自动化测试");
+		Thread.sleep(3000);
+		highlightElement(submitButton);
+		Thread.sleep(3000);
+		submitButton.click();
+		Log.endTestCase("搜索功能测试结束");
+	}
+	
+	/**
+	 * 调用表格元素
+	 */
+	@Test
+	public void testHandleiFrame2() {
+		Global.driver.get("file:///D:/git/MyFirstSeleniumDemo/TestWebs/table.html");
+		WebElement webTable=Global.driver.findElement(By.xpath("//table"));
+		Table table=new Table(webTable);
+		System.out.println(table.getCell(1, 1).getText());
+		table.getWebElementInCell(1, 1,By.tagName("input")).sendKeys("第一行第一列表格被找到");
 	}
 	
 }

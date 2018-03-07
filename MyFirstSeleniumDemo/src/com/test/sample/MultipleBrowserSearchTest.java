@@ -18,6 +18,7 @@ public class MultipleBrowserSearchTest {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--test-type", "--ignore-certificate-errors");
 			Global.driver = new ChromeDriver(options);
+			;
 		} else if (browser.equalsIgnoreCase("safari")) {
 			Global.driver = new SafariDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {

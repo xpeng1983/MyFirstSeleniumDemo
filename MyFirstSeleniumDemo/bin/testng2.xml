@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="SeleniumTestDemo" verbose="1">
+
+	<test name="Simple example">
+	<!-- chrome safari   -->
+	 <parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.test.sample.MultipleBrowserSearchTest" />
+		</classes>
+	</test>
+</suite>

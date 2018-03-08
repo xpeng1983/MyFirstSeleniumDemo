@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="SeleniumTestDemo" verbose="1">
+
+	<test name="Simple example">
+
+		<groups>
+			<define name="all">
+				<include name="人" />
+				<include name="动物" />
+			</define>
+			<run>
+				<include name="all" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.testng.Grouping" />
+		</classes>
+	</test>
+</suite>

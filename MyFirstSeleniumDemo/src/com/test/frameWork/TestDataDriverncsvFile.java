@@ -26,6 +26,7 @@ public class TestDataDriverncsvFile {
 	@DataProvider(name = "testData")
 	public static Object[][] words() throws IOException {
 		;
+		;
 		return getTestData("SeleniumTestData\\CSV.csv");
 	}
 
